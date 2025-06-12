@@ -1,0 +1,10 @@
+:root {
+  --bookCover: #1e90ff
+}
+
+
+.bookCoverOpen {
+  width: 500px;
+  height: 500px;
+  background-color: var(--bookCover);
+}
