@@ -2,9 +2,25 @@
   --bookCover: #1e90ff
 }
 
+body {
+  /* margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; */
+  height: auto;
+  width: auto;
+  margin: 0;
+  
+}
 
 .bookCoverOpen {
-  width: 500px;
-  height: 500px;
+  /* width: 100%;
+  height: 100%; */
+  /* object-fit: contain; */
+  aspect-ratio: 16 / 9;
+  max-height: 100vh; 
+
   background-color: var(--bookCover);
+  margin: 0 auto 
 }
