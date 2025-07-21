@@ -1,6 +1,6 @@
 :root {
-  --scroll-base: #d8d5bd;
-
+  --scroll-base: #c7c29e;
+  --shadow-color: #00000055;
   --max-width: 50rem;
   --header-footer-height: 5rem;
 }
@@ -10,7 +10,7 @@ body {
   height: 100dvh;
   margin-left: auto;
   margin-right: auto;
-  
+  overflow: hidden;
   /* height: 100dvh;
   width: 100dvw; */
   /* align-content: center; */
@@ -24,12 +24,13 @@ body {
 header {
   position: relative;
   margin-top: 0;
-  
+  /* box-shadow: drop-shadow(black); */
+  box-shadow: 0rem 0rem 1rem 1rem var(--shadow-color);
 
 
   max-width: var(--max-width);
   min-height: var(--header-footer-height);
-  background-color: #c0ba88;
+  background-color: var(--scroll-base);
   
   /* filter: drop-shadow(black); */
   
@@ -41,7 +42,7 @@ header {
   height: 100%;
   width: 100%;
   pointer-events: none;
-
+  /* background-color: var(--scroll-base); */
   background: black;
   
   -webkit-mask-image: linear-gradient( to bottom,
