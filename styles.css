@@ -5,15 +5,13 @@
   --header-footer-height: 5rem;
 }
 body {
+
   margin: 0;
   max-width: var(--max-width);
   height: 100dvh;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  /* height: 100dvh;
-  width: 100dvw; */
-  /* align-content: center; */
 }
 
 .body-inner {
@@ -21,20 +19,23 @@ body {
   padding: 2rem;
   height: inherit;
 }
+
 header {
   position: relative;
   margin-top: 0;
-  /* box-shadow: drop-shadow(black); */
   box-shadow: 0rem 0rem 1rem 1rem var(--shadow-color);
-
-
   max-width: var(--max-width);
   min-height: var(--header-footer-height);
   background-color: var(--scroll-base);
-  
-  /* filter: drop-shadow(black); */
-  
-  
+}
+
+footer {
+  position: relative;
+  margin-bottom: 0;
+  box-shadow: 0rem 0rem 1rem 1rem var(--shadow-color);
+  max-width: var(--max-width);
+  min-height: var(--header-footer-height);
+  background-color: var(--scroll-base);
 }
 
 .header-overlay {
