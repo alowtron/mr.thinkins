@@ -9,7 +9,7 @@ body {
   max-width: var(--max-width);
   margin-left: auto;
   margin-right: auto;
-  height: 100dvh;
+  /* height: 100dvh; */
   position: relative;
   /* overflow-y: auto; */
   padding: var(--header-footer-height) 0 1rem;
@@ -17,8 +17,8 @@ body {
 
 main {
   /* padding-top: var(--header-footer-height); */
-  /* min-height: calc(100dvh - 2 * var(--header-footer-height)); */
-  min-height: 100dvh;
+  min-height: calc(100dvh - 2 * var(--header-footer-height));
+  /* min-height: 100dvh; */
   /* margin: 0 auto; */
   background-color: var(--scroll-base);
   overflow-y: auto;
@@ -30,11 +30,10 @@ main {
 }
 
 header, footer {
-  /* top: 0; */
   position: fixed;
   /* left: 50%;
   transform: translateX(-50%); */
-  /* margin-top: 0; */
+  
   box-shadow: 0rem 0rem 1rem 1rem var(--shadow-color);
   max-width: var(--max-width);
   width: 100%;
