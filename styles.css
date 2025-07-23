@@ -18,7 +18,7 @@ body {
 main {
   
   min-height: calc(100dvh - 2 * var(--header-footer-height));
-  background-color: var(--scroll-base);
+  /* background-color: var(--scroll-base); */
   /* background-color: #f5e8c2;
   background-image:
     repeating-linear-gradient(135deg, transparent 0px, transparent 1px, rgba(0, 0, 0, 0.1) 1px, rgba(0, 0, 0, 0.1) 2px),
@@ -27,14 +27,40 @@ main {
     linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.05) 100%);
   background-repeat: repeat;
   background-size: 200% 200%, 100% 100%; */
-
+  
+  /* filter: url(#rough-edges); */
+  /* -webkit-backdrop-filter: url(#rough-edges); */
   /* filter: url(#wavy2); */
+  /* -webkit-mask-image: url('#rough-edges'); */
+  /* -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%; */
+  /* mask-image: url('#rough-edges');
+      mask-repeat: no-repeat;
+      mask-size: 100% 100%; */
   /* opacity: 0.5; */
   overflow-y: auto;
   /* z-index: -10; */
 }
 
+main::before {
+  /* max-width: var(--max-width); */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--scroll-base);
+  filter: url(#rough-edges);
+  
+  /* border-radius: inherit;
+  overflow: hidden; */
+  /* z-index: 0; */
+  /* border-radius: 10px; */
+}
 
+main > * {
+  position: relative;
+  /* z-index: 1; */
+  /* padding: 20px; */
+}
 
 .noise-overlay::before, header::before, footer::before {
   content: "";
