@@ -65,11 +65,13 @@ main > * {
 .noise-overlay::before, header::before, footer::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  inset: 0;
+  /* top: 0; left: 0; right: 0; bottom: 0; */
   pointer-events: none;
   filter: url(#noise);
+  
   opacity: 0.3;
-  background-blend-mode: multiply;
+  /* background-blend-mode: multiply; */
   z-index: 1; 
 }
 
@@ -86,6 +88,8 @@ header, footer {
   width: 100%;
   height: var(--header-footer-height);
   background-color: var(--scroll-base);
+  /* inset: 0; */
+  /* filter: url(#rough-edges-tb); */
 }
 
 header {
