@@ -18,26 +18,6 @@ body {
 main {
   
   min-height: calc(100dvh - 2 * var(--header-footer-height));
-  /* background-color: var(--scroll-base); */
-  /* background-color: #f5e8c2;
-  background-image:
-    repeating-linear-gradient(135deg, transparent 0px, transparent 1px, rgba(0, 0, 0, 0.1) 1px, rgba(0, 0, 0, 0.1) 2px),
-    repeating-linear-gradient(90deg, transparent 0px, transparent 1px, rgba(0, 0, 0, 0.08) 1px, rgba(0, 0, 0, 0.08) 2px),
-    repeating-linear-gradient(0deg, transparent 0px, transparent 1px, rgba(0, 0, 0, 0.06) 1px, rgba(0, 0, 0, 0.06) 2px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.05) 100%);
-  background-repeat: repeat;
-  background-size: 200% 200%, 100% 100%; */
-  
-  /* filter: url(#rough-edges); */
-  /* -webkit-backdrop-filter: url(#rough-edges); */
-  /* filter: url(#wavy2); */
-  /* -webkit-mask-image: url('#rough-edges'); */
-  /* -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: 100% 100%; */
-  /* mask-image: url('#rough-edges');
-      mask-repeat: no-repeat;
-      mask-size: 100% 100%; */
-  /* opacity: 0.5; */
   overflow-y: auto;
   /* z-index: -10; */
 }
@@ -89,7 +69,7 @@ header, footer {
   height: var(--header-footer-height);
   background-color: var(--scroll-base);
   /* inset: 0; */
-  /* filter: url(#rough-edges-tb); */
+  filter: url(#rough-edges-tb);
 }
 
 header {

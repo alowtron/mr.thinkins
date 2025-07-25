@@ -59,14 +59,22 @@
       <feDisplacementMap in="SourceGraphic" scale="40" />
     </filter>
   </svg>
-  <svg style="display: none;">
+  <!-- <svg style="display: none;">
     <filter id="rough-edges-tb" x="0" y="0" width="100%">
       <rect width="100%" height="1000%" result="abc" />
       <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="10" stitchTiles="stitch" result="canvas-noise-result"/>
       <feDisplacementMap in2="#00000000" in="SourceGraphic" scale="20" yChannelSelector="A"/>
     </filter>
-  </svg>
-  
+  </svg> -->
+  <svg style="display:none">
+  <filter id="rough-edges-tb" x="0" y="0" width="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="10" stitchTiles="stitch" result="noise" />
+    <feComponentTransfer in="noise" result="noiseAFlat">
+      <feFuncA type="table" tableValues="0.5 0.5" />
+    </feComponentTransfer>
+    <feDisplacementMap in="SourceGraphic" in2="noiseAFlat" scale="5" xChannelSelector="R" yChannelSelector="A" />
+  </filter>
+</svg>
   <!-- <svg>
   <filter id="wavy2" >
     <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="40" seed="7"></feTurbulence>
