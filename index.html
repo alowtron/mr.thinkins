@@ -61,14 +61,15 @@
   </svg>
 
   <svg style="display:none">
-    <filter id="rough-edges-tb" x="0" y="0" width="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="10" stitchTiles="stitch" result="noise" />
-      <feComponentTransfer in="noise" result="noiseAFlat">
-        <feFuncA type="table" tableValues="0.5 0.5" />
-      </feComponentTransfer>
-      <feDisplacementMap in="SourceGraphic" in2="noiseAFlat" scale="5" xChannelSelector="R" yChannelSelector="A" />
-    </filter>
-  </svg>
+  <filter id="rough-edges-tb" x="-90%" y="-990%" width="200%" height="10000%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="10" stitchTiles="stitch" result="noise" />
+    <feComponentTransfer in="noise" result="noiseAFlat">
+      <feFuncA type="table" tableValues="0.5 0.5" />
+    </feComponentTransfer>
+    <feOffset in="noiseAFlat" dx="0" dy="625" result="noiseShifted" />
+    <feDisplacementMap in="SourceGraphic" in2="noiseShifted" scale="5" xChannelSelector="R" yChannelSelector="A" />
+  </filter>
+</svg>
 </main>
 
 <footer>
@@ -80,14 +81,36 @@
 </body>
 <script src="main.js"></script>
 <svg style="display:none;">
-  <filter id="noise" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+  <filter id="noise" x="0%" y="-990%" width="100%" height="10000%" color-interpolation-filters="sRGB">
+  <!-- <filter id="noise" x="0%" y="-990%" width="100%" height="10000%" color-interpolation-filters="sRGB"> -->
+    
     <feTurbulence type="fractalNoise" baseFrequency="0.008" numOctaves="10" stitchTiles="stitch" result="canvas-noise-result"/>
+
     <feColorMatrix in="canvas-noise-result" type="matrix" values="
       0.33 0.33 0.33 0 0 
       0.33 0.33 0.33 0 0 
       0.33 0.33 0.33 0 0 
       0    0    0    1 0" 
     result="grey"/>       
+  
+  <feOffset in="noiseAFlat" dx="0" dy="0" result="noiseShifted" />
+  </filter>
+</svg>
+
+<svg style="display:none;">
+  <filter id="noiseOverlay" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+  <!-- <filter id="noise" x="0%" y="-990%" width="100%" height="10000%" color-interpolation-filters="sRGB"> -->
+    
+    <feTurbulence type="fractalNoise" baseFrequency="0.008" numOctaves="10" stitchTiles="stitch" result="canvas-noise-result"/>
+
+    <feColorMatrix in="canvas-noise-result" type="matrix" values="
+      0.33 0.33 0.33 0 0 
+      0.33 0.33 0.33 0 0 
+      0.33 0.33 0.33 0 0 
+      0    0    0    1 0" 
+    result="grey"/>       
+  
+  <!-- <feOffset in="noiseAFlat" dx="0" dy="1000" result="noiseShifted" /> -->
   </filter>
 </svg>
 </html>
