@@ -105,6 +105,55 @@ footer {
   );
 }
 
+
+
+.wood-rod {
+  position: fixed;
+  max-width: 60rem;
+  width: 100%;
+  height: 3rem;
+  margin-left: -5rem;
+  margin-top: -4rem;
+  background-color: rgb(56, 34, 0);
+  /* width: 110%; */
+  /* padding-left: 10rem; */
+  
+  
+  box-shadow: 0rem 0rem 1rem 1rem var(--shadow-color);
+}
+
+.wood-rod-overlay {
+  position: fixed;
+  max-width: 60rem;
+  width: 100%;
+  height: 3rem;
+  margin-left: -5rem;
+  margin-top: -4rem;
+  /* padding-left: 10rem; */
+
+  pointer-events: none;
+
+  background: var(--shadow-color);
+  /* background-color: pink; */
+
+  -webkit-mask-image: linear-gradient( to bottom,
+    rgba(0, 0, 0, 1) 0,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  mask-image: linear-gradient(to bottom,
+    rgba(0, 0, 0, 1) 0,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.bottom-rod {
+  bottom: 1rem;
+}
+
 .charm-regular {
   font-family: "Charm";
   font-weight: 400;
