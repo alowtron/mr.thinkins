@@ -105,19 +105,29 @@ footer {
   );
 }
 
-
+.wood-rod::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 1;
+  scale: 2 0.5;
+  z-index: 1;
+  filter: url(#noise); /* This creates the noise texture */
+  mix-blend-mode:overlay;
+}
 
 .wood-rod {
   position: fixed;
   max-width: 60rem;
   width: 100%;
-  height: 3rem;
+  height: 2.90rem;
   margin-left: -5rem;
   margin-top: -4rem;
-  background-color: rgb(56, 34, 0);
+  background-color: rgb(56, 33, 0);
   /* width: 110%; */
   /* padding-left: 10rem; */
-  
+  overflow: hidden;
   
   box-shadow: 0rem 0rem 1rem 1rem var(--shadow-color);
 }
@@ -126,7 +136,7 @@ footer {
   position: fixed;
   max-width: 60rem;
   width: 100%;
-  height: 3rem;
+  height: 2.9rem;
   margin-left: -5rem;
   margin-top: -4rem;
   /* padding-left: 10rem; */
